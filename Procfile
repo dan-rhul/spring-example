@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* org.example.rhulproject.Project
+web: java -jar rhul-project-test-1.0-SNAPSHOT.jar
