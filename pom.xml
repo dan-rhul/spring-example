@@ -15,20 +15,6 @@
 
     <build>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-dependency-plugin</artifactId>-->
-<!--                <version>2.10</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>copy-dependencies</id>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>copy-dependencies</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -46,19 +32,6 @@
                     <outputDirectory>${project.build.directory}</outputDirectory>
                 </configuration>
             </plugin>
-<!--            <plugin>-->
-<!--                &lt;!&ndash; requires for heroku deployment via API &ndash;&gt;-->
-<!--                <groupId>com.heroku.sdk</groupId>-->
-<!--                <artifactId>heroku-maven-plugin</artifactId>-->
-<!--                <version>3.0.3</version>-->
-<!--                <configuration>-->
-<!--                    <appName>rhul-project-test</appName>-->
-<!--                    <processTypes>-->
-<!--                        &lt;!&ndash; "Project" is the class for the web server &ndash;&gt;-->
-<!--                        <web>java $JAVA_OPTS -jar target/rhul-project-test-1.0-SNAPSHOT.jar</web>-->
-<!--                    </processTypes>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 
@@ -69,6 +42,17 @@
             <url>https://dl.bintray.com/vaccovecrana/vacco-oss</url>
         </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-vaccovecrana-vacco-oss</id>
+            <name>bintray-plugins</name>
+            <url>https://dl.bintray.com/vaccovecrana/vacco-oss</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
