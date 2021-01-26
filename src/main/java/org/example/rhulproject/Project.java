@@ -17,11 +17,6 @@ public class Project {
         SpringApplication.run(Project.class, args);
     }
 
-    @GetMapping("/")
-    String index() {
-        return "index";
-    }
-
     @GetMapping("/time")
     String time() {
         return Instant.now().toString();
