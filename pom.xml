@@ -35,31 +35,11 @@
         </plugins>
     </build>
 
-    <repositories>
-        <repository>
-            <id>bintray-vaccovecrana-vacco-oss</id>
-            <name>bintray</name>
-            <url>https://dl.bintray.com/vaccovecrana/vacco-oss</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-vaccovecrana-vacco-oss</id>
-            <name>bintray-plugins</name>
-            <url>https://dl.bintray.com/vaccovecrana/vacco-oss</url>
-        </pluginRepository>
-    </pluginRepositories>
-
     <dependencies>
         <dependency>
-            <groupId>io.vacco.java-express</groupId>
+            <groupId>com.github.Simonwep</groupId>
             <artifactId>java-express</artifactId>
-            <version>0.2.1</version>
-            <scope>compile</scope>
+            <version>0.0.10</version>
         </dependency>
     </dependencies>
 
