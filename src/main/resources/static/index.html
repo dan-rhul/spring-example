@@ -16,7 +16,7 @@
 <script>
     function getTime() {
         $.get("/time", function(data) {
-            $('.timeText').text(data);
+            $('#timeText').text(data);
         }).fail(function() {
             alert('there was an error');
         });
