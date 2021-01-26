@@ -15,19 +15,50 @@
 
     <build>
         <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-dependency-plugin</artifactId>-->
+<!--                <version>2.10</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>copy-dependencies</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>copy-dependencies</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
-                <!-- requires for heroku deployment via API -->
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.3</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
-                    <appName>rhul-project-test</appName>
-                    <processTypes>
-                        <!-- "Project" is the class for the web server -->
-                        <web>java $JAVA_OPTS -jar target/rhul-project-test-1.0-SNAPSHOT.jar</web>
-                    </processTypes>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                </configuration>
+            </plugin>
+<!--            <plugin>-->
+<!--                &lt;!&ndash; requires for heroku deployment via API &ndash;&gt;-->
+<!--                <groupId>com.heroku.sdk</groupId>-->
+<!--                <artifactId>heroku-maven-plugin</artifactId>-->
+<!--                <version>3.0.3</version>-->
+<!--                <configuration>-->
+<!--                    <appName>rhul-project-test</appName>-->
+<!--                    <processTypes>-->
+<!--                        &lt;!&ndash; "Project" is the class for the web server &ndash;&gt;-->
+<!--                        <web>java $JAVA_OPTS -jar target/rhul-project-test-1.0-SNAPSHOT.jar</web>-->
+<!--                    </processTypes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
