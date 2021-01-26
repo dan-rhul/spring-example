@@ -24,6 +24,6 @@ public class Project {
     }
 
     private void startServer() {
-        this.app.listen();
+        this.app.listen(Integer.parseInt(System.getenv("PORT")));
     }
 }

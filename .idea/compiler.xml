@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rhul-project-test" />
+        <module name="Car parking system" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Car parking system" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
