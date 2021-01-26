@@ -1,6 +1,6 @@
 package org.example.rhulproject;
 
-import express.*;
+import express.Express;
 import express.middleware.Middleware;
 
 import java.io.IOException;
