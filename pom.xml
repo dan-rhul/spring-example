@@ -24,7 +24,7 @@
                     <appName>rhul-project-test</appName>
                     <processTypes>
                         <!-- "Project" is the class for the web server -->
-                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Project</web>
+                        <web>java $JAVA_OPTS -jar target/rhul-project-test-1.0-SNAPSHOT.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
