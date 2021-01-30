@@ -1,1 +1,1 @@
-web: java -jar target/rhul-project-test-1.0-SNAPSHOT.jar
+web: java -jar target/rhul-project-test-1.0-SNAPSHOT.jar --server.port=$PORT
