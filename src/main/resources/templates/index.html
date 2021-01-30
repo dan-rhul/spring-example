@@ -15,7 +15,7 @@
 
 <script>
     function getTime() {
-        $.post("/time", function(data) {
+        $.get("/time", function(data) {
             console.log(data);
             $('#timeText').text(data.time);
         }).fail(function() {

@@ -16,6 +16,6 @@ public class Controller {
     @GetRoute("/time")
     @JSON
     public String time() {
-        return Instant.now().toString();
+        return "{time:\"" + Instant.now().toString() + "\"}";
     }
 }
